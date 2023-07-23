@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+{% block title %}Sign up{% endblock %}
+{% block content %}
+<CENTER>
+  <H2>Sign Up</H2>
+  <form action="/sign-up-process" method="POST">
+    <div style="width:60%">
+      <div class="row m-2">
+        <div class="col-md-6">
+          <label for="inputFName">First name</label>
+          <input type="text" pattern="[A-Za-z]+" class="form-control" id="inputFName" placeholder="First name" name="fname" required>
+        </div>
+        <div class="col-md-6">
+          <label for="inputLName">Last name</label>
+          <input type="text" pattern="[A-Za-z]+" class="form-control" id="inputLName" placeholder="Last name" name="lname" required>
+        </div>
+      </div>
+      <div class="row m-2">
+        <div class="col-md-6">
+          <label for="email">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="example@email.com" name="email" required>
+        </div>
+        <div class="col-md-4">
+          <label for="PhoneInput">Phone Number</label>
+          <input type="tel" class="form-control" id="PhoneInput" placeholder="Phone number" name="phone" required>
+        </div>
+        <div class="col-md-2">
+          <label for="AgeInput">Age</label>
+          <input type="number" class="form-control" id="AgeInput" placeholder="Your age" name="age" required>
+        </div>
+      </div>
+      <div class="row m-2">
+        <div class="col-md-12">
+          <label for="InputCountry">Country</label>
+          <input type="text" class="form-control" id="InputCountry" placeholder="Country" name="country" required>
+        </div>
+      </div>
+      <div class="row m-2">
+        <div class="col-md-6">
+          <label for="InputState">State</label>
+          <input type="text" class="form-control" id="InputState" placeholder="State" name="state" required>
+        </div>
+        <div class="col-md-6">
+          <label for="InputCity">City</label>
+          <input type="text" class="form-control" id="InputCity" placeholder="City" name="city" required>
+        </div>
+      </div>
+      <div class="row m-2">
+        <div class="col-md-6">
+          <label for="inputusername">Username</label>
+          <input type="text" class="form-control" id="inputusername" placeholder="Create a username for your account" name="username" required>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Enter a Password for your account" name="password" required>
+        </div>
+      </div>
+      <div class="p-2 m-2"></div>
+      <input type="submit" class="btn btn-primary">
+      </div>
+    </div>
+  </form>
+</CENTER>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+{% block title %}{{ log_user.user_name }} - Dashboard{% endblock %}
+
+{% block content %}
+<div align="CENTER">
+    <H5>@{{log_user.user_name}}</H5>
+    <H1>USER INFORMATION</H1>
+    <hr>
+    <div style="width:80%" align="LEFT">
+        <div class="card m-2">
+            <div class="card-header">
+                Personal Information
+            </div>
+            <div align="CENTER" class="row p-3 h4">
+                <div class="col-sm-4 p-2">
+                    <B>Name</B>: {{log_user.fname}} {{log_user.lname}}
+                </div>
+                <div class="col-sm-4 p-2">
+                    <B>Age</B>: {{log_user.age}}
+                </div>
+                <div class="col-sm-4 p-2">
+                    <B>User id</B>: {{log_user.id}}
+                </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-header">
+                Contact
+            </div>
+            <div align="CENTER" class="row p-3 h4">
+                <div class="col-sm-6 p-2">
+                    <B>Email</B>: {{log_user.email}}
+                </div>
+                <div class="col-sm-6 p-2">
+                    <B>Phone</B>: {{log_user.phone}}
+                </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-header">
+                Location
+            </div>
+            <div align="CENTER" class="row p-3 h4">
+                <div class="col-sm-3 p-2">
+                    <B>Country</B>: {{log_user.country}}
+                </div>
+                <div class="col-sm-4 p-2">
+                    <B>State</B>: {{log_user.state}}
+                </div>
+                <div class="col-sm-4 p-2">
+                    <B>City</B>: {{log_user.city}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="/"><button class="btn btn-primary">Log Out</button></a>
+</div>
+{% endblock %}

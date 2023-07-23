@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="position-absolute top-50 start-50 translate-middle">
+    <h1>USERS DATABASE</h1>
+    <h3>Get Registered in the user database made with sqlite</h3>
+    <a href="{{ url_for('sign_up') }}"><button type="button" class="btn btn-primary">Sign up</button></a>
+</div>
+{% endblock %}

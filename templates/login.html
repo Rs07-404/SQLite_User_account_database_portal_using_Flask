@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+{% block title %}login{% endblock %}
+
+{% block content %}
+<div class="position-absolute top-50 start-50 translate-middle">
+    {% if mode=="delete" %}
+    <h1>LOGIN</h1><h4>to delete your account</h4>
+    {% else %}
+    <h1>LOGIN</h1>
+    {% endif %}
+    {{ render_form(form, novalidate=True) }}
+</div>
+{% endblock %}
